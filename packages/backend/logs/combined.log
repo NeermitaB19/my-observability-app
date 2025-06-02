@@ -1,0 +1,16 @@
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T10:16:56.707Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T10:17:04.615Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T10:17:04.616Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T10:17:12.936Z"}
+{"level":"info","message":"Task created","task":{"completed":false,"description":"very first my own task so happie","id":1,"title":"First task"},"timestamp":"2025-06-02T10:17:59.163Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T10:17:59.175Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T10:17:59.176Z"}
+{"from":false,"level":"info","message":"Task status updated","taskId":1,"timestamp":"2025-06-02T10:18:01.413Z","to":true}
+{"from":true,"level":"info","message":"Task status updated","taskId":1,"timestamp":"2025-06-02T10:18:02.134Z","to":false}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T10:43:13.075Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T10:43:22.303Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T10:43:22.305Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T10:46:21.059Z"}
+{"level":"info","message":"Task created","task":{"completed":false,"description":"safsef","id":1,"title":"esadsad"},"timestamp":"2025-06-02T10:46:43.753Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T10:46:43.768Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T10:46:43.769Z"}
