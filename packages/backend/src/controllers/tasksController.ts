@@ -54,5 +54,3 @@ export const updateTaskStatus = (req: Request<{ id: string }>, res: Response) =>
 
   return res.json(task);
 };
-
-

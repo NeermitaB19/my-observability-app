@@ -14,3 +14,32 @@
 {"level":"info","message":"Task created","task":{"completed":false,"description":"safsef","id":1,"title":"esadsad"},"timestamp":"2025-06-02T10:46:43.753Z"}
 {"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T10:46:43.768Z"}
 {"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T10:46:43.769Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T11:36:55.714Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T11:37:52.484Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T11:37:52.485Z"}
+{"level":"info","message":"Task created","task":{"completed":false,"description":"fdhdfh","id":1,"title":"xd"},"timestamp":"2025-06-02T11:37:56.374Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T11:37:56.388Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T11:37:56.389Z"}
+{"from":false,"level":"info","message":"Task status updated","taskId":1,"timestamp":"2025-06-02T11:37:57.996Z","to":true}
+{"from":true,"level":"info","message":"Task status updated","taskId":1,"timestamp":"2025-06-02T11:37:58.419Z","to":false}
+{"level":"info","message":"Task fetched","task":{"completed":false,"description":"fdhdfh","id":1,"title":"xd"},"timestamp":"2025-06-02T11:37:59.700Z"}
+{"level":"info","message":"Task fetched","task":{"completed":false,"description":"fdhdfh","id":1,"title":"xd"},"timestamp":"2025-06-02T11:37:59.701Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T11:38:02.010Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T11:38:02.011Z"}
+{"from":false,"level":"info","message":"Task status updated","taskId":1,"timestamp":"2025-06-02T11:38:03.346Z","to":true}
+{"level":"info","message":"Task fetched","task":{"completed":true,"description":"fdhdfh","id":1,"title":"xd"},"timestamp":"2025-06-02T11:38:04.656Z"}
+{"level":"info","message":"Task fetched","task":{"completed":true,"description":"fdhdfh","id":1,"title":"xd"},"timestamp":"2025-06-02T11:38:04.658Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T11:38:06.149Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T11:38:06.151Z"}
+{"level":"info","message":"Task created","task":{"completed":false,"description":"xsadsd","id":2,"title":"xddd"},"timestamp":"2025-06-02T11:57:56.771Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T11:57:56.785Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T11:57:56.786Z"}
+{"from":false,"level":"info","message":"Task status updated","taskId":2,"timestamp":"2025-06-02T12:00:32.086Z","to":true}
+{"from":true,"level":"info","message":"Task status updated","taskId":2,"timestamp":"2025-06-02T12:00:32.604Z","to":false}
+{"level":"info","message":"Task created","task":{"completed":false,"description":"fsvdvfs","id":3,"title":"task3"},"timestamp":"2025-06-02T12:00:40.762Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T12:00:40.777Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T12:00:40.778Z"}
+{"level":"info","message":"Task fetched","task":{"completed":false,"description":"fsvdvfs","id":3,"title":"task3"},"timestamp":"2025-06-02T12:00:42.493Z"}
+{"level":"info","message":"Task fetched","task":{"completed":false,"description":"fsvdvfs","id":3,"title":"task3"},"timestamp":"2025-06-02T12:00:42.498Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T12:00:45.999Z"}
+{"level":"info","message":"Fetching all tasks","timestamp":"2025-06-02T12:00:46.001Z"}
