@@ -6,7 +6,8 @@ import {
   register,
   httpRequestDurationSeconds,
   httpRequestsTotal,
-  httpActiveRequests
+  httpActiveRequests,
+  httpResponseSizeBytes
 } from './utils/metrics'; // Prometheus metrics
 
 const app = express();
@@ -33,6 +34,8 @@ app.use((req, res, next) => {
     end(labels);
     httpRequestsTotal.inc(labels);
     httpActiveRequests.dec({ method: req.method, route });
+    const contentLength = parseInt(res.get('Content-Length') || '0', 10);
+    httpResponseSizeBytes.observe(labels, contentLength);
   });
 
   next();
