@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { Task } from '../types/task';
-import { logger } from '../utils/logger';
+import  logger  from '../utils/logger';
 
 let tasks: Task[] = [];
 

@@ -1,6 +1,9 @@
 import express from 'express';
 import cors from 'cors';
 import taskRoutes from './routes/tasks';
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 import {
   register,
