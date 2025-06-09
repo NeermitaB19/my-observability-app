@@ -4,14 +4,13 @@ import taskRoutes from './routes/tasks';
 import dotenv from 'dotenv';
 dotenv.config();
 
-
 import {
   register,
   httpRequestDurationSeconds,
   httpRequestsTotal,
   httpActiveRequests,
   httpResponseSizeBytes
-} from './utils/metrics'; // Prometheus metrics
+} from './utils/metrics';
 
 const app = express();
 const PORT = 4000;
@@ -21,39 +20,53 @@ app.use(express.json());
 
 // Prometheus middleware to track metrics
 app.use((req, res, next) => {
+  // Normalize route to avoid label explosion and negative counts
+  const rawRoute = req.originalUrl.split('?')[0]; // Remove query params
+  const normalizedRoute = rawRoute.replace(/\/\d+/g, '/:id'); // Replace numeric IDs with ':id'
+
+  const labels = {
+    method: req.method,
+    route: normalizedRoute
+  };
+
+  httpActiveRequests.inc(labels);
   const end = httpRequestDurationSeconds.startTimer();
-  const routePath = req.path; // initial path, before route resolution
-  httpActiveRequests.inc({ method: req.method, route: routePath });
 
   res.on('finish', () => {
-    const route =
-      req.route?.path || req.originalUrl || routePath; // fallback to original URL
-    const labels = {
-      method: req.method,
-      route,
-      status_code: res.statusCode
+    const statusLabels = {
+      ...labels,
+      status_code: res.statusCode.toString()
     };
 
-    end(labels);
-    httpRequestsTotal.inc(labels);
-    httpActiveRequests.dec({ method: req.method, route });
+    end(statusLabels);
+    httpRequestsTotal.inc(statusLabels);
+    httpActiveRequests.dec(labels);
+
     const contentLength = parseInt(res.get('Content-Length') || '0', 10);
-    httpResponseSizeBytes.observe(labels, contentLength);
+    if (!isNaN(contentLength)) {
+      httpResponseSizeBytes.observe(statusLabels, contentLength);
+    }
+  });
+
+  res.on('close', () => {
+    if (!res.writableEnded) {
+      httpActiveRequests.dec(labels);
+    }
   });
 
   next();
 });
 
-//  Prometheus metrics endpoint
+// Prometheus metrics endpoint
 app.get('/metrics', async (_req, res) => {
   res.set('Content-Type', register.contentType);
   res.end(await register.metrics());
 });
 
-//  API routes
+// API routes
 app.use('/api/tasks', taskRoutes);
 
-//  Start server
+// Start server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
